@@ -78,7 +78,6 @@ public class diaryController {
 	@ResponseBody
 	public ResponseEntity<Map<String, String>> uploadSummernoteImageFile(@RequestParam("file") MultipartFile multipartFile) {
 		
-		//JsonObject jsonObject = new JsonObject();
 		HashMap<String, String> map = new HashMap<String, String>();
 		
 		
@@ -93,23 +92,17 @@ public class diaryController {
 		try {
 			InputStream fileStream = multipartFile.getInputStream();
 			FileUtils.copyInputStreamToFile(fileStream, targetFile);	//파일 저장
-			//jsonObject.addProperty("url", "/summernoteImage/"+savedFileName);
-			//jsonObject.addProperty("responseCode", "success");
-				
 			
 			
 		} catch (IOException e) {
 			FileUtils.deleteQuietly(targetFile);	//저장된 파일 삭제
-			//jsonObject.addProperty("responseCode", "error");
 			e.printStackTrace();
 		}
 		
-		//jsonObject.addProperty("aaa", "aaa");
 		ResponseEntity<Map<String, String>> entity = new ResponseEntity<Map<String, String>>(map,HttpStatus.OK);
 		map.put("url", "/temp/"+savedFileName);
 		map.put("responseCode", "success");
 	
-		//return jsonObject;
 		
 		return entity;
 	}
@@ -118,18 +111,18 @@ public class diaryController {
 	public void download(HttpServletResponse response, @PathVariable String filename, @PathVariable String ext) {
 		
 		try {
+			// 저장 경로
 			String path = "C:/Temp/"+filename+"."+ext;
 			
 			Path file = Paths.get(path);
-			// 1. 헤더 작성
 			response.setHeader("Content-Disposition", "attachment;filename"+file.getFileName());
 			response.setContentType("image/jpeg");
-			// 2. 파일 정보 및 상태 불러오기
+			//  파일 정보 및 상태 불러오기
 			FileChannel fc = FileChannel.open(file, StandardOpenOption.READ);
-			// 3. response로 file의 데이터를 전송하는 로직 만들기
+			//  response로 file의 데이터를 전송하는 로직 만들기
 			WritableByteChannel outputChannel = Channels.newChannel(response.getOutputStream());
 			
-			// 4. file에서 response로 데이터 전송
+			// file에서 response로 데이터 전송
 			// 0사이즈 부터 fc.size()까지
 			fc.transferTo(0, fc.size(), outputChannel);
 			
