@@ -1,0 +1,55 @@
+@charset "UTF-8";
+        /* main */
+
+        #diary-main h1 {
+            padding-top: 5em;
+            color: white;
+            font-size: 3em;
+            text-align: center;
+            line-height: 1.2em;
+            text-shadow: 0 3px 2px  black;
+        }
+        
+        /* Hot Daily - swiper */
+
+        .swiper-container {
+            width: 100%;
+            height: 100%;
+         }
+
+        .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .swiper-slide img {
+            display: block;
+            width: 40%;
+            height: 40%;
+            object-fit: cover;
+        }
+
+        .swiper-button-next:after, .swiper-button-prev:after{
+            display: none;
+            }
+        
+        .swiper-pagination {
+            position: relative;
+        }
+        
+        .our-diary-title {
+            position: absolute;
+            top: -50px;
+            left: 40%;
+            padding: 0.8em;
+            background-color: #FEDD6A;
+            width: 25%;
+            text-align: center;
+            font-size: 3em;
+            font-weight: bold;
+            color: #fff;
+            border-radius: 20px;
+        }

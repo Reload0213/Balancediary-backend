@@ -1,0 +1,69 @@
+@charset "UTF-8";
+       #appTester-wrap {
+           padding-top: 130px;
+           width: 100%;
+           height: 1000px;
+           background: url(https://cdn.dribbble.com/users/1345092/screenshots/9976485/media/9a6b5b4b54f25fe77fe9cb14a646aec4.png) no-repeat center;
+           background-size: cover;
+       }
+
+       .appTester-title {
+           padding-top: 1em;
+           text-align: center;
+           font-weight: bold;
+           color: white;
+           font-size: 2em;
+           background-color: #333;
+           opacity: 80%;
+           line-height: 1.5em;
+           text-shadow: 4px 2.5px #000;
+       }
+       .appTester-content {
+           padding-top: 2em;
+           text-align: center;
+           line-height: 2.5em;
+           text-shadow: 4px 2.5px #F5F5F5;
+        }
+        
+        .appTester-content h2{
+           font-size: 2em;
+
+       }
+
+       .appTester-form {
+            padding-top: 15em;
+            display: flex;
+            justify-content: right;
+        }
+
+        .form-box {
+            padding-right: 4em;
+        }
+
+        .form-box form {
+            background-color: #fff;
+            height: 55px;
+            border-radius: 30px;
+            box-shadow: 4px 2.5px #333; 
+            padding-left: 1em;
+        }
+        .form-box button {
+            color: white;
+            margin-left: 0.4em;
+            margin-top: 0.3em;
+            width: 5.2em;
+            height: 45px;
+            font-size: 1.2em;
+            font-weight: bold;
+            border-radius: 30px;
+            background-color: #6CD3B8;
+        }
+
+        .form-box input {
+            border-style: none;
+            height: 2.5em;
+        }
+
+        .form-box h2 {
+            text-shadow: 4px 2.5px #fff; 
+        }

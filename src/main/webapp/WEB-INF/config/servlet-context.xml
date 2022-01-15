@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans
+	xmlns="http://www.springframework.org/schema/mvc"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:beans="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/mvc
+                  http://www.springframework.org/schema/mvc/spring-mvc.xsd
+                  http://www.springframework.org/schema/beans
+                  http://www.springframework.org/schema/beans/spring-beans.xsd
+                  http://www.springframework.org/schema/context
+                  http://www.springframework.org/schema/context/spring-context.xsd
+                  http://www.springframework.org/schema/tx
+                  http://www.springframework.org/schema/tx/spring-tx.xsd
+                  http://www.springframework.org/schema/aop
+                  http://www.springframework.org/schema/aop/spring-aop.xsd">
+
+	<!-- 스캔한 패키지 내부의 클래스 중 Controller 어노테이션을 가지고 있는 클래스들을 Controller로 로딩하도록 
+		한다. -->
+	<annotation-driven />
+
+	<!-- 스캔할 bean 들이 모여있는 패키지를 지정한다. -->
+	<context:component-scan
+		base-package="com.balancediary" />
+
+	<!-- Controller의 메서드에서 반환하는 문자열 앞 뒤에 붙일 경로 정보를 세팅 -->
+	<beans:bean
+		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<beans:property name="prefix" value="/WEB-INF/views/" />
+		<beans:property name="suffix" value=".jsp" />
+	</beans:bean>
+
+	<!-- 정적 파일 경로 세팅 -->
+	<resources mapping="/resources/**" location="/resources/" />
+	<resources mapping="/temp/**" location="c:/temp/" />
+
+	<interceptors>
+		<interceptor>
+			<!-- /member/ 경로를 타는 어떤 루트던 인터셉터를 거쳐야만함 -->
+			<mapping path="/member/**" />
+			<beans:bean
+				class="com.balancediary.interceptor.LoginInterceptor"></beans:bean>
+		</interceptor>
+	</interceptors>
+
+	<!-- 파일 업로드를 위한 mutipartResolver 설정 -->
+	<beans:bean id="multipartResolver"
+		class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+		<!-- 넣을 수 있는 파일들의 최대 사이즈 -->
+		<beans:property name="maxUploadSize" value="52428800" />
+		<!-- 파일 하나당 최대 사이즈 -->
+		<beans:property name="maxUploadSizePerFile"
+			value="52428800" />
+		<!-- 아무나 아무파일이나 넣을 수 없도록 어느정도 메모리영역이 차야 업로드되록 설정하는 -->
+		<beans:property name="maxInMemorySize" value="0" />
+	</beans:bean>
+
+	<tx:annotation-driven />
+
+</beans:beans>
