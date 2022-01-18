@@ -26,9 +26,9 @@ public class userController {
 		String referer = request.getHeader("Referer");
 		String path = referer.substring(21, referer.length());
 		StringTokenizer st = new StringTokenizer(path, "/");
-		
+		while (st.hasMoreTokens()) {
 			path = st.nextToken();
-			path = st.nextToken();
+		}
 		
 		session.setAttribute("path", path);
 		return "login";
@@ -53,7 +53,7 @@ public class userController {
 	}
 
 	@GetMapping("logout")
-	public String logoutMainGET(HttpServletRequest request) throws Exception{
+	public String logout(HttpServletRequest request) throws Exception{
         HttpSession session = request.getSession();
         String referer = request.getHeader("Referer");
 		String path = referer.substring(21, referer.length());
@@ -63,8 +63,7 @@ public class userController {
 		}
         session.invalidate();
         
-        return "redirect:/"+path;        
-        
+        return path;        
     }
 	
 }

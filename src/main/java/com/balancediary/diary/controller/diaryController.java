@@ -60,7 +60,7 @@ public class diaryController {
 		return "write-diary";
 	}
 
-	@GetMapping("member/my-diary")
+	@GetMapping({"member/my-diary","Balancediary/my-diary"})
 	public String myDiaryPage() {
 
 		return "my-diary";

@@ -20,9 +20,14 @@ public class userService {
 		if(vo1 != null) {
 			session.setAttribute("account", vo1);
 			path = (String)session.getAttribute("path");
+			if(path != "Balancediary") {
+				path = "home";
+			}
 		} else {
 			path = "login";
 		}
+		
+		
 		return path;
 	}
 	

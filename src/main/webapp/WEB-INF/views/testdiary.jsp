@@ -8,5 +8,6 @@
 </head>
 <body>
 	<h1>diary 저장완료</h1>
+	<h1></h1>
 </body>
 </html>

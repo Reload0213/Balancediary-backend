@@ -370,9 +370,9 @@ p.blank {
             }
             trtd += (startCount) ? ++countDay : '';
             // ************ 데이터 삽입 **************
-            trtd += '<div>탄</div>';
+          /*   trtd += '<div>탄</div>';
             trtd += '<div>단</div>';
-            trtd += '<div>지</div>';
+            trtd += '<div>지</div>'; */
             if (countDay === lastDay.getDate()) { 
                 startCount = 0; 
             }
