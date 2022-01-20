@@ -12,19 +12,24 @@
 <script src="https://kit.fontawesome.com/f1def33959.js"
 	crossorigin="anonymous"></script>
 <!-- default css -->
-<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/format.css">
-<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/header.css">
-<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/personalization/personalization.css">
-<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/footer.css">
+<link rel="stylesheet"
+	href="${pageContext.request.contextPath}/resources/css/format.css">
+<link rel="stylesheet"
+	href="${pageContext.request.contextPath}/resources/css/header.css">
+<link rel="stylesheet"
+	href="${pageContext.request.contextPath}/resources/css/personalization/personalization.css">
+<link rel="stylesheet"
+	href="${pageContext.request.contextPath}/resources/css/footer.css">
 <!-- js -->
-<script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/jquery-3.6.0.min.js"></script>
-<script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/header.js"></script>
+<script type="text/javascript"
+	src="${pageContext.request.contextPath}/resources/js/jquery-3.6.0.min.js"></script>
+<script type="text/javascript"
+	src="${pageContext.request.contextPath}/resources/js/header.js"></script>
 
 <style>
 * {
 	box-sizing: border-box;
 }
-
 
 body {
 	text-align: center;
@@ -77,14 +82,19 @@ p.blank {
 					</div>
 					<div class="top-side">
 						<div>
-							<a href="${pageContext.request.contextPath}/member/my-diary">My Diary</a>
+							<a href="${pageContext.request.contextPath}/member/my-diary">My
+								Diary</a>
 						</div>
 						<c:if test="${empty sessionScope.account.userid}">
-                        <div><a href="${pageContext.request.contextPath}/isLogin">로그인</a></div>
-                        </c:if>
-                        <c:if test="${!empty sessionScope.account.userid}">
-                        <div><a href="${pageContext.request.contextPath}/logout">로그아웃</a></div>
-                        </c:if>
+							<div>
+								<a href="${pageContext.request.contextPath}/isLogin">로그인</a>
+							</div>
+						</c:if>
+						<c:if test="${!empty sessionScope.account.userid}">
+							<div>
+								<a href="${pageContext.request.contextPath}/logout">로그아웃</a>
+							</div>
+						</c:if>
 					</div>
 				</section>
 				<nav id="top-nav">
@@ -96,14 +106,20 @@ p.blank {
 							</ul></li>
 						<li><a href="#">식단 가이드 <span>▼</span></a>
 							<ul>
-								<li><a href="${pageContext.request.contextPath}/lean-mass-up">다이어트 + 근육 증가</a></li>
-								<li><a href="${pageContext.request.contextPath}/diet">단순 체중 감량</a></li>
-								<li><a href="${pageContext.request.contextPath}/bulk-up">체중 + 근육 증량</a></li>
+								<li><a
+									href="${pageContext.request.contextPath}/lean-mass-up">다이어트
+										+ 근육 증가</a></li>
+								<li><a href="${pageContext.request.contextPath}/diet">단순
+										체중 감량</a></li>
+								<li><a href="${pageContext.request.contextPath}/bulk-up">체중
+										+ 근육 증량</a></li>
 							</ul></li>
 						<li><a href="#">Information <span>▼</span></a>
 							<ul>
-								<li><a href="${pageContext.request.contextPath}/q&a">자주 묻는 질문 Q&A</a></li>
-								<li><a href="${pageContext.request.contextPath}/recommend">BalanceDiary 추천 레서피</a></li>
+								<li><a href="${pageContext.request.contextPath}/q&a">자주
+										묻는 질문 Q&A</a></li>
+								<li><a href="${pageContext.request.contextPath}/recommend">BalanceDiary
+										추천 레서피</a></li>
 							</ul></li>
 						<li><a href="diary-main">우리들의 Diary</a></li>
 						<li><a href="#">고객센터</a></li>
@@ -125,16 +141,23 @@ p.blank {
 								</ul></li>
 							<li class="menu"><a class="main" href="#">식단가이드</a>
 								<ul class="sub">
-									<li><a href="${pageContext.request.contextPath}/lean-mass-up">다이어트 + 근육 증가</a></li>
-									<li><a href="${pageContext.request.contextPath}/diet">단순 체중 감량</a></li>
-									<li><a href="${pageContext.request.contextPath}/bulk-up">체중 + 근육 증량</a></li>
+									<li><a
+										href="${pageContext.request.contextPath}/lean-mass-up">다이어트
+											+ 근육 증가</a></li>
+									<li><a href="${pageContext.request.contextPath}/diet">단순
+											체중 감량</a></li>
+									<li><a href="${pageContext.request.contextPath}/bulk-up">체중
+											+ 근육 증량</a></li>
 								</ul></li>
 							<li class="menu"><a class="main" href="#">Information</a>
 								<ul class="sub">
-									<li><a href="${pageContext.request.contextPath}/q&a">자주 묻는 질문 Q&A</a></li>
-									<li><a href="${pageContext.request.contextPath}/recommend">BalanceDiary 추천 레서피</a></li>
+									<li><a href="${pageContext.request.contextPath}/q&a">자주
+											묻는 질문 Q&A</a></li>
+									<li><a href="${pageContext.request.contextPath}/recommend">BalanceDiary
+											추천 레서피</a></li>
 								</ul></li>
-							<li><a href="${pageContext.request.contextPath}/diary-main">우리들의 Diary</a></li>
+							<li><a href="${pageContext.request.contextPath}/diary-main">우리들의
+									Diary</a></li>
 							<li><a href="#">고객센터</a></li>
 						</ul>
 					</div>
@@ -154,7 +177,15 @@ p.blank {
 						<div class="mm-survey-results">
 							<div class="mm-survey-results-container">
 								<h1>참여해주셔서 감사합니다</h1>
-								<h2>당신에게는 ㅁㅁㅁ 식단을 추천합니다</h2>
+								<div class="result-lmup result-link">
+									<h2>당신에게는 lean-mass-up 식단을 추천합니다</h2>
+								</div>
+								<div class="result-bkup result-link">
+									<h2>당신에게는 bulk-up 식단을 추천합니다</h2>
+								</div>
+								<div class="result-diet result-link">
+									<h2>당신에게는 diet 식단을 추천합니다</h2>
+								</div>
 								<a href="">이동하기</a>
 								<!-- <h3 class="mm-survey-results-score"></h3> -->
 								<!-- <ul class="mm-survey-results-list"></ul> -->
@@ -176,23 +207,23 @@ p.blank {
 										</div>
 										<div class="mm-survey-item">
 											<input type="radio" id="radio01" data-item="1" name="radio1"
-												value="red" /> <label for="radio01"><span></span>
-											<p>현재 3개월 이상 운동을 하고 있다.</p></label>
+												value="0" /> <label for="radio01"><span></span>
+												<p>현재 3개월 이상 운동을 하고 있다.</p></label>
 										</div>
 										<div class="mm-survey-item">
 											<input type="radio" id="radio02" data-item="1" name="radio1"
-												value="blue" /> <label for="radio02"><span></span>
-											<p>아직 운동을 하고 있지 않지만, 곧 시작할 것이다.</p></label>
+												value="1" /> <label for="radio02"><span></span>
+												<p>아직 운동을 하고 있지 않지만, 곧 시작할 것이다.</p></label>
 										</div>
 										<div class="mm-survey-item">
 											<input type="radio" id="radio03" data-item="1" name="radio1"
-												value="green" /> <label for="radio03"><span></span>
-											<p>현재는 잠시 건강 혹은 시간적 여유가 나지 않아 할 수 없는 상황이다.</p></label>
+												value="2" /> <label for="radio03"><span></span>
+												<p>현재는 잠시 건강 혹은 시간적 여유가 나지 않아 할 수 없는 상황이다.</p></label>
 										</div>
 										<div class="mm-survey-item">
 											<input type="radio" id="radio04" data-item="1" name="radio1"
-												value="purple" /> <label for="radio04"><span></span>
-											<p>운동을 즐기지 않으며, 앞으로도 운동할 계획이 없다.</p></label>
+												value="3" /> <label for="radio04"><span></span>
+												<p>운동을 즐기지 않으며, 앞으로도 운동할 계획이 없다.</p></label>
 										</div>
 									</div>
 								</div>
@@ -204,22 +235,22 @@ p.blank {
 										<div class="mm-survey-item">
 											<input type="radio" id="radio05" data-item="2" name="radio2"
 												value="1" /> <label for="radio05"><span></span>
-											<p>1일 1식</p></label>
+												<p>1일 1식</p></label>
 										</div>
 										<div class="mm-survey-item">
 											<input type="radio" id="radio06" data-item="2" name="radio2"
 												value="2" /> <label for="radio06"><span></span>
-											<p>1일 2식</p></label>
+												<p>1일 2식</p></label>
 										</div>
 										<div class="mm-survey-item">
 											<input type="radio" id="radio07" data-item="2" name="radio2"
 												value="3" /> <label for="radio07"><span></span>
-											<p>1일 3식 혹은 그 이상</p></label>
+												<p>1일 3식 혹은 그 이상</p></label>
 										</div>
 										<div class="mm-survey-item">
 											<input type="radio" id="radio08" data-item="2" name="radio2"
 												value="0" /> <label for="radio08"><span></span>
-											<p>불규칙적, 최대한 먹지 않는다.</p></label>
+												<p>불규칙적, 최대한 먹지 않는다.</p></label>
 										</div>
 									</div>
 								</div>
@@ -231,17 +262,17 @@ p.blank {
 										<div class="mm-survey-item">
 											<input type="radio" id="radio09" data-item="3" name="radio3"
 												value="1" /> <label for="radio09"><span></span>
-											<p>평소 체중이 많이 나간다 생각하여, 단순히 살을 효과적으로 빼고 싶습니다.</p></label>
+												<p>평소 체중이 많이 나간다 생각하여, 단순히 살을 효과적으로 빼고 싶습니다.</p></label>
 										</div>
 										<div class="mm-survey-item">
 											<input type="radio" id="radio10" data-item="3" name="radio3"
 												value="2" /> <label for="radio10"><span></span>
-											<p>체중 감량도 감량이지만, 운동과 함께 탄탄한 몸을 만들어보고 싶습니다.</p></label>
+												<p>체중 감량도 감량이지만, 운동과 함께 탄탄한 몸을 만들어보고 싶습니다.</p></label>
 										</div>
 										<div class="mm-survey-item">
 											<input type="radio" id="radio11" data-item="3" name="radio3"
 												value="3" /> <label for="radio11"><span></span>
-											<p>평소 외소한 몸에 마음에 들지 않아, 이번 기회를 통해 건장하고 다부진 몸으로 만들어 보고
+												<p>평소 외소한 몸에 마음에 들지 않아, 이번 기회를 통해 건장하고 다부진 몸으로 만들어 보고
 													싶습니다.</p></label>
 										</div>
 									</div>
@@ -254,22 +285,22 @@ p.blank {
 										<div class="mm-survey-item">
 											<input type="radio" id="radio13" data-item="4" name="radio4"
 												value="0" /> <label for="radio13"><span></span>
-											<p>1형 당뇨를 앓고 있어요.</p></label>
+												<p>1형 당뇨를 앓고 있어요.</p></label>
 										</div>
 										<div class="mm-survey-item">
 											<input type="radio" id="radio14" data-item="4" name="radio4"
 												value="0" /> <label for="radio14"><span></span>
-											<p>2형 당뇨를 앓고 있어요.</p></label>
+												<p>2형 당뇨를 앓고 있어요.</p></label>
 										</div>
 										<div class="mm-survey-item">
 											<input type="radio" id="radio15" data-item="4" name="radio4"
 												value="0" /> <label for="radio15"><span></span>
-											<p>고혈압이 있습니다.</p></label>
+												<p>고혈압이 있습니다.</p></label>
 										</div>
 										<div class="mm-survey-item">
 											<input type="radio" id="radio16" data-item="4" name="radio4"
 												value="0" /> <label for="radio16"><span></span>
-											<p>해당 사항 없습니다.</p></label>
+												<p>해당 사항 없습니다.</p></label>
 										</div>
 									</div>
 								</div>
@@ -327,11 +358,13 @@ p.blank {
 					<a href="https://www.facebook.com"><i class="fab fa-facebook"></i></a>
 					<a href="https://www.instagram.com"><i class="fab fa-instagram"></i></a>
 					<a href="https://www.ePrivacy.or.kr"><img
-						src="${pageContext.request.contextPath}/resources/images/ePrivacy.png" alt="ePrivacy"></a> <a
-						href="https://www.kns.or.kr"><img src="${pageContext.request.contextPath}/resources/images/kns.png"
+						src="${pageContext.request.contextPath}/resources/images/ePrivacy.png"
+						alt="ePrivacy"></a> <a href="https://www.kns.or.kr"><img
+						src="${pageContext.request.contextPath}/resources/images/kns.png"
 						alt="kns"></a> <a href="https://www.mfds.go.kr"><img
-						src="${pageContext.request.contextPath}/resources/images/foodsafe.png" alt="foodsafe"></a> <a
-						href="https://www.mohw.go.kr"><img src="${pageContext.request.contextPath}/resources/images/bogun.png"
+						src="${pageContext.request.contextPath}/resources/images/foodsafe.png"
+						alt="foodsafe"></a> <a href="https://www.mohw.go.kr"><img
+						src="${pageContext.request.contextPath}/resources/images/bogun.png"
 						alt="bogun"></a>
 				</div>
 				<div class="copyright">
@@ -340,317 +373,369 @@ p.blank {
 			</section>
 		</footer>
 	</div>
-	
+
 	<script type="text/javascript">
-	  jQuery('.mm-prev-btn').hide();
+		jQuery('.mm-prev-btn').hide();
 
-      var x;
-      var count;
-      var current;
-      var percent;
-      var z = [];
+		var x;
+		var count;
+		var current;
+		var percent;
+		var z = [];
 
-      init();
-      getCurrentSlide();
-      goToNext();
-      goToPrev();
-      getCount();
-      // checkStatus();
-      // buttonConfig();
-      buildStatus();
-      deliverStatus();
-      submitData();
-      goBack();
+		init();
+		getCurrentSlide();
+		goToNext();
+		goToPrev();
+		getCount();
+		// checkStatus();
+		// buttonConfig();
+		buildStatus();
+		deliverStatus();
+		submitData();
+		goBack();
 
-      function init() {
-          
-          jQuery('.mm-survey-container .mm-survey-page').each(function() {
+		function init() {
 
-              var item;
-              var page;
+			jQuery('.mm-survey-container .mm-survey-page').each(function() {
 
-              item = jQuery(this);
-              page = item.data('page');
+				var item;
+				var page;
 
-              item.addClass('mm-page-'+page);
-              //item.html(page);
+				item = jQuery(this);
+				page = item.data('page');
 
-          });
+				item.addClass('mm-page-' + page);
+				//item.html(page);
 
-      }
+			});
 
-      function getCount() {
+		}
 
-          count = jQuery('.mm-survey-page').length;
-          return count;
+		function getCount() {
 
-      }
+			count = jQuery('.mm-survey-page').length;
+			return count;
 
-      function goToNext() {
+		}
 
-          jQuery('.mm-next-btn').on('click', function() {
-              goToSlide(x);
-              getCount();
-              current = x + 1;
-              var g = current/count;
-              buildProgress(g);
-              var y = (count + 1);
-              getButtons();
-              jQuery('.mm-survey-page').removeClass('active');
-              jQuery('.mm-page-'+current).addClass('active');
-              getCurrentSlide();
-              checkStatus();
-              if( jQuery('.mm-page-'+count).hasClass('active') ){
-                  if( jQuery('.mm-page-'+count).hasClass('pass') ) {
-                      jQuery('.mm-finish-btn').addClass('active');
-                  }
-                  else {
-                      jQuery('.mm-page-'+count+' .mm-survery-content .mm-survey-item').on('click', function() {
-                          jQuery('.mm-finish-btn').addClass('active');
-                      });
-                  }
-              }
-              else {
-                  jQuery('.mm-finish-btn').removeClass('active');
-                  if( jQuery('.mm-page-'+current).hasClass('pass') ) {
-                      jQuery('.mm-survey-container').addClass('good');
-                      jQuery('.mm-survey').addClass('okay');
-                  }
-                  else {
-                      jQuery('.mm-survey-container').removeClass('good');
-                      jQuery('.mm-survey').removeClass('okay');
-                  }
-              }
-              buttonConfig();
-          });
+		function goToNext() {
 
-      }
+			jQuery('.mm-next-btn')
+					.on(
+							'click',
+							function() {
+								goToSlide(x);
+								getCount();
+								current = x + 1;
+								var g = current / count;
+								buildProgress(g);
+								var y = (count + 1);
+								getButtons();
+								jQuery('.mm-survey-page').removeClass('active');
+								jQuery('.mm-page-' + current)
+										.addClass('active');
+								getCurrentSlide();
+								checkStatus();
+								if (jQuery('.mm-page-' + count).hasClass(
+										'active')) {
+									if (jQuery('.mm-page-' + count).hasClass(
+											'pass')) {
+										jQuery('.mm-finish-btn').addClass(
+												'active');
+									} else {
+										jQuery(
+												'.mm-page-'
+														+ count
+														+ ' .mm-survery-content .mm-survey-item')
+												.on(
+														'click',
+														function() {
+															jQuery(
+																	'.mm-finish-btn')
+																	.addClass(
+																			'active');
+														});
+									}
+								} else {
+									jQuery('.mm-finish-btn').removeClass(
+											'active');
+									if (jQuery('.mm-page-' + current).hasClass(
+											'pass')) {
+										jQuery('.mm-survey-container')
+												.addClass('good');
+										jQuery('.mm-survey').addClass('okay');
+									} else {
+										jQuery('.mm-survey-container')
+												.removeClass('good');
+										jQuery('.mm-survey')
+												.removeClass('okay');
+									}
+								}
+								buttonConfig();
+							});
+			
+		}
 
-      function goToPrev() {
+		function goToPrev() {
 
-          jQuery('.mm-prev-btn').on('click', function() {
-              goToSlide(x);
-              getCount();			
-              current = (x - 1);
-              var g = current/count;
-              buildProgress(g);
-              var y = count;
-              getButtons();
-              jQuery('.mm-survey-page').removeClass('active');
-              jQuery('.mm-page-'+current).addClass('active');
-              getCurrentSlide();
-              checkStatus();
-              jQuery('.mm-finish-btn').removeClass('active');
-              if( jQuery('.mm-page-'+current).hasClass('pass') ) {
-                  jQuery('.mm-survey-container').addClass('good');
-                  jQuery('.mm-survey').addClass('okay');
-              }
-              else {
-                  jQuery('.mm-survey-container').removeClass('good');
-                  jQuery('.mm-survey').removeClass('okay');
-              }
-              buttonConfig();
-          });
+			jQuery('.mm-prev-btn').on('click', function() {
+				goToSlide(x);
+				getCount();
+				current = (x - 1);
+				var g = current / count;
+				buildProgress(g);
+				var y = count;
+				getButtons();
+				jQuery('.mm-survey-page').removeClass('active');
+				jQuery('.mm-page-' + current).addClass('active');
+				getCurrentSlide();
+				checkStatus();
+				jQuery('.mm-finish-btn').removeClass('active');
+				if (jQuery('.mm-page-' + current).hasClass('pass')) {
+					jQuery('.mm-survey-container').addClass('good');
+					jQuery('.mm-survey').addClass('okay');
+				} else {
+					jQuery('.mm-survey-container').removeClass('good');
+					jQuery('.mm-survey').removeClass('okay');
+				}
+				buttonConfig();
+			});
 
-      }
+		}
 
-      function buildProgress(g) {
+		function buildProgress(g) {
 
-          if(g > 1){
-              g = g - 1;
-          }
-          else if (g === 0) {
-              g = 1;
-          }
-          g = g * 100;
-          jQuery('.mm-survey-progress-bar').css({ 'width' : g+'%' });
+			if (g > 1) {
+				g = g - 1;
+			} else if (g === 0) {
+				g = 1;
+			}
+			g = g * 100;
+			jQuery('.mm-survey-progress-bar').css({
+				'width' : g + '%'
+			});
 
-      }
+		}
 
-      function goToSlide(x) {
+		function goToSlide(x) {
 
-          return x;
+			return x;
 
-      }
+		}
 
-      function getCurrentSlide() {
+		function getCurrentSlide() {
 
-          jQuery('.mm-survey-page').each(function() {
+			jQuery('.mm-survey-page').each(function() {
 
-              var item;
+				var item;
 
-              item = jQuery(this);
+				item = jQuery(this);
 
-              if( jQuery(item).hasClass('active') ) {
-                  x = item.data('page');
-              }
-              else {
-                  
-              }
+				if (jQuery(item).hasClass('active')) {
+					x = item.data('page');
+				} else {
 
-              return x;
+				}
 
-          });
+				return x;
 
-      }
+			});
 
-      function getButtons() {
+		}
 
-          if(current === 0) {
-              current = y;
-          }
-          if(current === count) {
-              jQuery('.mm-next-btn').hide();
-          }
-          else if(current === 1) {
-              jQuery('.mm-prev-btn').hide();
-          }
-          else {
-              jQuery('.mm-next-btn').show();
-              jQuery('.mm-prev-btn').show();
-          }
+		function getButtons() {
 
-      }
+			if (current === 0) {
+				current = y;
+			}
+			if (current === count) {
+				jQuery('.mm-next-btn').hide();
+			} else if (current === 1) {
+				jQuery('.mm-prev-btn').hide();
+			} else {
+				jQuery('.mm-next-btn').show();
+				jQuery('.mm-prev-btn').show();
+			}
 
-      jQuery('.mm-survey-q li input').each(function() {
+		}
 
-          var item;
-          item = jQuery(this);
+		jQuery('.mm-survey-q li input').each(function() {
 
-          jQuery(item).on('click', function() {
-              if( jQuery('input:checked').length > 0 ) {
-                  // console.log(item.val());
-                  jQuery('label').parent().removeClass('active');
-                  item.closest( 'li' ).addClass('active');
-              }
-              else {
-                  //
-              }
-          });
+			var item;
+			item = jQuery(this);
 
-      });
+			jQuery(item).on('click', function() {
+				if (jQuery('input:checked').length > 0) {
+					// console.log(item.val());
+					jQuery('label').parent().removeClass('active');
+					item.closest('li').addClass('active');
+				} else {
+					//
+				}
+			});
 
-      percent = (x/count) * 100;
-      jQuery('.mm-survey-progress-bar').css({ 'width' : percent+'%' });
+		});
 
-      function checkStatus() {
-          jQuery('.mm-survery-content .mm-survey-item').on('click', function() {
-              var item;
-              item = jQuery(this);
-              item.closest('.mm-survey-page').addClass('pass');
-          });
-      }
+		percent = (x / count) * 100;
+		jQuery('.mm-survey-progress-bar').css({
+			'width' : percent + '%'
+		});
 
-      function buildStatus() {
-          jQuery('.mm-survery-content .mm-survey-item').on('click', function() {
-              var item;
-              item = jQuery(this);
-              item.addClass('bingo');
-              item.closest('.mm-survey-page').addClass('pass');
-              jQuery('.mm-survey-container').addClass('good');
-          });
-      }
+		function checkStatus() {
+			jQuery('.mm-survery-content .mm-survey-item').on('click',
+					function() {
+						var item;
+						item = jQuery(this);
+						item.closest('.mm-survey-page').addClass('pass');
+					});
+		}
 
-      function deliverStatus() {
-          jQuery('.mm-survey-item').on('click', function() {
-              if( jQuery('.mm-survey-container').hasClass('good') ){
-                  jQuery('.mm-survey').addClass('okay');
-              }
-              else {
-                  jQuery('.mm-survey').removeClass('okay');	
-              }
-              buttonConfig();
-          });
-      }
+		function buildStatus() {
+			jQuery('.mm-survery-content .mm-survey-item').on('click',
+					function() {
+						var item;
+						item = jQuery(this);
+						item.addClass('bingo');
+						item.closest('.mm-survey-page').addClass('pass');
+						jQuery('.mm-survey-container').addClass('good');
+					});
+		}
 
-      function lastPage() {
-          if( jQuery('.mm-next-btn').hasClass('cool') ) {
-              alert('cool');
-          }
-      }
+		function deliverStatus() {
+			jQuery('.mm-survey-item').on('click', function() {
+				if (jQuery('.mm-survey-container').hasClass('good')) {
+					jQuery('.mm-survey').addClass('okay');
+				} else {
+					jQuery('.mm-survey').removeClass('okay');
+				}
+				buttonConfig();
+			});
+		}
 
-      function buttonConfig() {
-          if( jQuery('.mm-survey').hasClass('okay') ) {
-              jQuery('.mm-next-btn button').prop('disabled', false);
-          }
-          else {
-              jQuery('.mm-next-btn button').prop('disabled', true);
-          }
-      }
+		function lastPage() {
+			if (jQuery('.mm-next-btn').hasClass('cool')) {
+				alert('cool');
+			}
+		}
 
-      function submitData() {
-          jQuery('.mm-finish-btn').on('click', function() {
-              collectData();
-              jQuery('.mm-survey-bottom').slideUp();
-              jQuery('.mm-survey-results').slideDown();
-          });
-      }
+		function buttonConfig() {
+			if (jQuery('.mm-survey').hasClass('okay')) {
+				jQuery('.mm-next-btn button').prop('disabled', false);
+			} else {
+				jQuery('.mm-next-btn button').prop('disabled', true);
+			}
+		}
 
-      function collectData() {
-          
-          var map = {};
-          var ax = ['0','red','mercedes','3.14','3'];
-          var answer = '';
-          var total = 0;
-          var ttl = 0;
-          var g;
-          var c = 0;
+		 		/* 설문 값 받기 */
+		        $('.mm-next-btn').click(function () {
+		          let personalVal = 0;
+		          	
+		          if($('input[name="radio1"]:checked')){
+		          	  personalVal += $('input[name="radio1"]:checked').val();
+		          }
+		          if($('input[name="radio2"]:checked')){
+		          	  personalVal += $('input[name="radio2"]:checked').val();
+		          }
+		          if($('input[name="radio1"]:checked')){
+		          	  personalVal += $('input[name="radio3"]:checked').val();
+		          }
+		          if($('input[name="radio1"]:checked')){
+		          	  personalVal += $('input[name="radio4"]:checked').val();
+		          }
+		        	  
+		          	  console.log(personalVal);
+		        });
+		 		
+		
+		 		
+		 		/* 설문 값으로 결과 보여주기 */
+				document.querySelector(".mm-finish-btn").addEventListener("click", function(){
+					let resultLinks = document.querySelectorAll(".result-link");
+						  for (let index = 0; index < resultLinks.length; index++) {
+							 resultLinks[index].style.display = "none";
+						  }
+						  
+				  });
+		
+		function submitData() {
+			jQuery('.mm-finish-btn').on('click', function() {
+				collectData();
+				jQuery('.mm-survey-bottom').slideUp();
+				jQuery('.mm-survey-results').slideDown();
+				
+			
+			});
+		}
 
-          jQuery('.mm-survey-item input:checked').each(function(index, val) {
-              var item;
-              var data;
-              var name;
-              var n;
+		function collectData() {
 
-              item = jQuery(this);
-              data = item.val();
-              name = item.data('item');
-              n = parseInt(data);
-              total += n;
+			var map = {};
+			var ax = [ '0', 'red', 'mercedes', '3.14', '3' ];
+			var answer = '';
+			var total = 0;
+			var ttl = 0;
+			var g;
+			var c = 0;
+			var data = 0;
 
-              map[name] = data;
+			jQuery('.mm-survey-item input:checked').each(function(index, val) {
+				var item;
+				var data;
+				var name;
+				var n;
 
-          });
+				item = jQuery(this);
+				data += item.val();
+				name = item.data('item');
+				n = parseInt(data);
+				total += n;
 
-          jQuery('.mm-survey-results-container .mm-survey-results-list').html('');
+				map[name] = data;
 
-          for (i = 1; i <= count; i++) {
+			});
+			jQuery('.mm-survey-results-container .mm-survey-results-list')
+					.html('');
 
-              var t = {};
-              var m = {};
-              answer += map[i] + '<br>';
-              
-              if( map[i] === ax[i]) {
-                  g = map[i];
-                  p = 'correct';
-                  c = 1;
-              }
-              else {
-                  g = map[i];
-                  p = 'incorrect';
-                  c = 0;
-              }
+			for (i = 1; i <= count; i++) {
 
-              jQuery('.mm-survey-results-list').append('<li class="mm-survey-results-item '+p+'"><span class="mm-item-number">'+i+'</span><span class="mm-item-info">'+g+' - '+p+'</span></li>');
+				var t = {};
+				var m = {};
+				answer += map[i] + '<br>';
 
-              m[i] = c;
-              ttl += m[i];
+				if (map[i] === ax[i]) {
+					g = map[i];
+					p = 'correct';
+					c = 1;
+				} else {
+					g = map[i];
+					p = 'incorrect';
+					c = 0;
+				}
 
-          }
+				jQuery('.mm-survey-results-list').append(
+						'<li class="mm-survey-results-item '+p+'"><span class="mm-item-number">'
+								+ i + '</span><span class="mm-item-info">' + g
+								+ ' - ' + p + '</span></li>');
 
-          var results;
-          results = ( ( ttl / count ) * 100 ).toFixed(0);
+				m[i] = c;
+				ttl += m[i];
 
-          jQuery('.mm-survey-results-score').html( results + '%' );
+			}
 
-      }
+			var results;
+			results = ((ttl / count) * 100).toFixed(0);
 
-      function goBack() {
-          jQuery('.mm-back-btn').on('click', function() {
-              jQuery('.mm-survey-bottom').slideDown();
-              jQuery('.mm-survey-results').slideUp();
-          });
-      }
+			jQuery('.mm-survey-results-score').html(results + '%');
+
+		}
+
+		function goBack() {
+			jQuery('.mm-back-btn').on('click', function() {
+				jQuery('.mm-survey-bottom').slideDown();
+				jQuery('.mm-survey-results').slideUp();
+			});
+		}
 	</script>
 </body>
 </html>
