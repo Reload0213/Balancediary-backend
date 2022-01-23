@@ -176,17 +176,33 @@ p.blank {
 
 						<div class="mm-survey-results">
 							<div class="mm-survey-results-container">
+								<br>
+								<br>
 								<h1>참여해주셔서 감사합니다</h1>
-								<div class="result-lmup result-link">
-									<h2>당신에게는 lean-mass-up 식단을 추천합니다</h2>
-								</div>
 								<div class="result-bkup result-link">
-									<h2>당신에게는 bulk-up 식단을 추천합니다</h2>
+									<br>
+									<br>
+									<h2>당신에게는 근육 증량(벌크업) 식단을 추천합니다</h2>
+									<br>
+									<br>
+									<a href="${pageContext.request.contextPath}/bulk-up">이동하기</a>
 								</div>
 								<div class="result-diet result-link">
-									<h2>당신에게는 diet 식단을 추천합니다</h2>
+									<br>
+									<br>
+									<h2>당신에게는 체중 감량 위주 다이어트 식단을 추천합니다</h2>
+									<br>
+									<br>
+									<a href="${pageContext.request.contextPath}/diet">이동하기</a>
 								</div>
-								<a href="">이동하기</a>
+								<div class="result-lmup result-link">
+									<br>
+									<br>
+									<h2>당신에게는 상승 다이어트(린매스업) 식단을 추천합니다</h2>
+									<br>
+									<br>
+									<a href="${pageContext.request.contextPath}/lean-mass-up">이동하기</a>
+								</div>
 								<!-- <h3 class="mm-survey-results-score"></h3> -->
 								<!-- <ul class="mm-survey-results-list"></ul> -->
 							</div>
@@ -207,12 +223,12 @@ p.blank {
 										</div>
 										<div class="mm-survey-item">
 											<input type="radio" id="radio01" data-item="1" name="radio1"
-												value="0" /> <label for="radio01"><span></span>
+												value="4" /> <label for="radio01"><span></span>
 												<p>현재 3개월 이상 운동을 하고 있다.</p></label>
 										</div>
 										<div class="mm-survey-item">
 											<input type="radio" id="radio02" data-item="1" name="radio1"
-												value="1" /> <label for="radio02"><span></span>
+												value="3" /> <label for="radio02"><span></span>
 												<p>아직 운동을 하고 있지 않지만, 곧 시작할 것이다.</p></label>
 										</div>
 										<div class="mm-survey-item">
@@ -222,7 +238,7 @@ p.blank {
 										</div>
 										<div class="mm-survey-item">
 											<input type="radio" id="radio04" data-item="1" name="radio1"
-												value="3" /> <label for="radio04"><span></span>
+												value="1" /> <label for="radio04"><span></span>
 												<p>운동을 즐기지 않으며, 앞으로도 운동할 계획이 없다.</p></label>
 										</div>
 									</div>
@@ -261,17 +277,17 @@ p.blank {
 										</div>
 										<div class="mm-survey-item">
 											<input type="radio" id="radio09" data-item="3" name="radio3"
-												value="1" /> <label for="radio09"><span></span>
+												value="0" /> <label for="radio09"><span></span>
 												<p>평소 체중이 많이 나간다 생각하여, 단순히 살을 효과적으로 빼고 싶습니다.</p></label>
 										</div>
 										<div class="mm-survey-item">
 											<input type="radio" id="radio10" data-item="3" name="radio3"
-												value="2" /> <label for="radio10"><span></span>
+												value="3" /> <label for="radio10"><span></span>
 												<p>체중 감량도 감량이지만, 운동과 함께 탄탄한 몸을 만들어보고 싶습니다.</p></label>
 										</div>
 										<div class="mm-survey-item">
 											<input type="radio" id="radio11" data-item="3" name="radio3"
-												value="3" /> <label for="radio11"><span></span>
+												value="10" /> <label for="radio11"><span></span>
 												<p>평소 외소한 몸에 마음에 들지 않아, 이번 기회를 통해 건장하고 다부진 몸으로 만들어 보고
 													싶습니다.</p></label>
 										</div>
@@ -627,33 +643,31 @@ p.blank {
 			}
 		}
 
-		 		/* 설문 값 받기 */
-		        $('.mm-next-btn').click(function () {
-		          let personalVal = 0;
-		          	
-		          if($('input[name="radio1"]:checked')){
-		          	  personalVal += $('input[name="radio1"]:checked').val();
-		          }
-		          if($('input[name="radio2"]:checked')){
-		          	  personalVal += $('input[name="radio2"]:checked').val();
-		          }
-		          if($('input[name="radio1"]:checked')){
-		          	  personalVal += $('input[name="radio3"]:checked').val();
-		          }
-		          if($('input[name="radio1"]:checked')){
-		          	  personalVal += $('input[name="radio4"]:checked').val();
-		          }
-		        	  
-		          	  console.log(personalVal);
-		        });
-		 		
-		
-		 		
+			
 		 		/* 설문 값으로 결과 보여주기 */
 				document.querySelector(".mm-finish-btn").addEventListener("click", function(){
 					let resultLinks = document.querySelectorAll(".result-link");
+							
+						  /* 결과값 계산 */
+						  let personalVal = 0;
+						  val1 = $('input[name="radio1"]:checked').val();	
+				          val2 = $('input[name="radio2"]:checked').val();	
+				          val3 = $('input[name="radio3"]:checked').val();	
+				          val4 = $('input[name="radio4"]:checked').val();	
+						  
+				          personalVal = Number(val1) + Number(val2) + Number(val3) + Number(val4);
+				          console.log(personalVal);
+				          	   
 						  for (let index = 0; index < resultLinks.length; index++) {
 							 resultLinks[index].style.display = "none";
+						  }
+						  
+						  if(personalVal >= 12){
+							  resultLinks[0].style.display = "block";
+						  } else if(personalVal < 6){
+							  resultLinks[1].style.display = "block";
+						  } else {
+							  resultLinks[2].style.display = "block";
 						  }
 						  
 				  });

@@ -27,6 +27,15 @@
 	background: #fafafa;
 }
 
+.mm-survey-results-container h1{
+	padding-top: 200px;
+}
+
+.okay {
+	margin: 0px;
+	padding: 2em;
+}
+
 .mm-survey-page {
 	display: none;
 	font-family: 'Raleway';
